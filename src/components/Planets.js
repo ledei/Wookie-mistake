@@ -2,16 +2,23 @@ import { useEffect, useState } from "react";
 import FetchPlanets from "./FetchDataURL";
 import { RenderData } from "./RenderPlanetData";
 
-let apiPlanetURL = `https://swapi.dev/api/planets/?page=${1}`;
-
 export function Planets() {
   const [planets, setPlanets] = useState([]);
+  const [count, setCount] = useState(1);
+
+  let apiURL = `https://swapi.dev/api/planets/?page=${count}`;
 
   useEffect(() => {
-    FetchPlanets(apiPlanetURL).then((data) => {
+    FetchPlanets(apiURL).then((data) => {
       setPlanets(data);
     });
-  }, []);
+  }, [apiURL]);
 
-  return <>{planets && <RenderData results={planets} title="Planets" />}</>;
+  return (
+    <>
+      {planets && <RenderData results={planets} title="Planets" />}
+      <button onClick={() => setCount(count - 1)}>back</button>
+      <button onClick={() => setCount(count + 1)}>next</button>
+    </>
+  );
 }
