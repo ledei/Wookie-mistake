@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FetchPlanets from "./FetchDataURL";
-import { RenderData } from "./RenderData";
+import { RenderData } from "./RenderPlanetData";
 
 let apiPlanetURL = `https://swapi.dev/api/planets/?page=${1}`;
 
