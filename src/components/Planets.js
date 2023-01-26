@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import FetchPlanets from "./FetchDataURL";
-import { RenderData } from "./RenderData";
+import { RenderData } from "./RenderPlanetData";
 
-const apiPlanetURL = "https://swapi.dev/api/planets/?page=1";
+let apiPlanetURL = `https://swapi.dev/api/planets/?page=${1}`;
 
 export function Planets() {
   const [planets, setPlanets] = useState([]);
