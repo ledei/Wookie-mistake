@@ -4,9 +4,8 @@ import { Planets } from "./components/Planets";
 function App() {
   return (
     <div className="App">
-      <Planets />
       <Routes>
-        <Route></Route>
+        <Route path="/Planets" element={<Planets />} />
       </Routes>
     </div>
   );
