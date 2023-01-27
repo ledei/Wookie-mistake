@@ -1,24 +1,33 @@
 import { useEffect, useState } from "react";
 import FetchPeople from "./FetchDataURL";
+import Pagination from "./Pagination";
 import { RenderData } from "./RenderPeopleData";
 
 export function People() {
   const [people, setPeople] = useState([]);
-  const [count, setCount] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage] = useState(10);
 
-  let apiURL = `https://swapi.dev/api/people/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/people/?page=`;
 
   useEffect(() => {
-    FetchPeople(apiURL).then((data) => {
+    FetchPeople(apiURL, 9).then((data) => {
       setPeople(data);
     });
   }, [apiURL]);
 
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentPosts = people.slice(firstPostIndex, lastPostIndex);
+
   return (
     <>
-      {people && <RenderData results={people} title="People" />}
-      <button onClick={() => setCount(count - 1)}>back</button>
-      <button onClick={() => setCount(count + 1)}>next</button>
+      {people && <RenderData results={currentPosts} title="People" />}
+      <Pagination
+        totalPosts={people.length}
+        postPerPage={postPerPage}
+        setCurrentPage={setCurrentPage}
+      />
     </>
   );
 }

@@ -1,4 +1,4 @@
-export default async function FetchDataURL(url) {
+export default async function FetchDataURL(url, page) {
   function fetchJson(url) {
     return fetch(url).then((resp) => resp.json());
   }
@@ -7,7 +7,14 @@ export default async function FetchDataURL(url) {
     return data.results;
   }
 
-  let results = await fetchJson(url).then(extractResult);
+  let dataResult = [];
 
-  return results;
+  for (let i = 1; i <= page; i++) {
+    let results = await fetchJson(url + [i]).then(extractResult);
+    for (let result of results) {
+      dataResult.push(result);
+    }
+  }
+
+  return dataResult;
 }

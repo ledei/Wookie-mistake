@@ -1,24 +1,33 @@
 import { useEffect, useState } from "react";
 import FetchSpecies from "./FetchDataURL";
+import Pagination from "./Pagination";
 import { RenderData } from "./RenderSpeciesData";
 
 export function Species() {
   const [species, setSpecies] = useState([]);
-  const [count, setCount] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage] = useState(10);
 
-  let apiURL = `https://swapi.dev/api/species/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/species/?page=`;
 
   useEffect(() => {
-    FetchSpecies(apiURL).then((data) => {
+    FetchSpecies(apiURL, 4).then((data) => {
       setSpecies(data);
     });
   }, [apiURL]);
 
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentPosts = species.slice(firstPostIndex, lastPostIndex);
+
   return (
     <>
-      {species && <RenderData results={species} title="Species" />}
-      <button onClick={() => setCount(count - 1)}>back</button>
-      <button onClick={() => setCount(count + 1)}>next</button>
+      {species && <RenderData results={currentPosts} title="Species" />}
+      <Pagination
+        totalPosts={species.length}
+        postPerPage={postPerPage}
+        setCurrentPage={setCurrentPage}
+      />
     </>
   );
 }
