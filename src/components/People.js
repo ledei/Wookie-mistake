@@ -6,10 +6,10 @@ export function People() {
   const [people, setPeople] = useState([]);
   const [count, setCount] = useState(1);
 
-  let apiURL = `https://swapi.dev/api/people/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/people/?page=`;
 
   useEffect(() => {
-    FetchPeople(apiURL).then((data) => {
+    FetchPeople(apiURL, 9).then((data) => {
       setPeople(data);
     });
   }, [apiURL]);

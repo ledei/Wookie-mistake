@@ -5,10 +5,10 @@ import { RenderData } from "./RenderFilmsData";
 export function Films() {
   const [films, setFilms] = useState([]);
 
-  let apiURL = `https://swapi.dev/api/films/`;
+  let apiURL = `https://swapi.dev/api/films/?page=`;
 
   useEffect(() => {
-    FetchFilms(apiURL).then((data) => {
+    FetchFilms(apiURL, 1).then((data) => {
       setFilms(data);
     });
   }, [apiURL]);

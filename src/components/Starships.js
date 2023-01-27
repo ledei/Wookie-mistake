@@ -6,10 +6,10 @@ export function Starships() {
   const [starships, setStarships] = useState([]);
   const [count, setCount] = useState(1);
 
-  let apiURL = `https://swapi.dev/api/starships/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/starships/?page=`;
 
   useEffect(() => {
-    FetchStarships(apiURL).then((data) => {
+    FetchStarships(apiURL, 4).then((data) => {
       setStarships(data);
     });
   }, [apiURL]);

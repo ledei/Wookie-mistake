@@ -6,10 +6,10 @@ export function Species() {
   const [species, setSpecies] = useState([]);
   const [count, setCount] = useState(1);
 
-  let apiURL = `https://swapi.dev/api/species/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/species/?page=`;
 
   useEffect(() => {
-    FetchSpecies(apiURL).then((data) => {
+    FetchSpecies(apiURL, 4).then((data) => {
       setSpecies(data);
     });
   }, [apiURL]);

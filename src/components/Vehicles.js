@@ -6,10 +6,10 @@ export function Vehicles() {
   const [vehicles, setVehicles] = useState([]);
   const [count, setCount] = useState(1);
 
-  let apiURL = `https://swapi.dev/api/vehicles/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/vehicles/?page=`;
 
   useEffect(() => {
-    FetchVehicles(apiURL).then((data) => {
+    FetchVehicles(apiURL, 4).then((data) => {
       setVehicles(data);
     });
   }, [apiURL]);
