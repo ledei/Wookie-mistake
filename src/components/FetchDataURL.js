@@ -15,7 +15,6 @@ export default async function FetchDataURL(url, page) {
       dataResult.push(result);
     }
   }
-  console.log(dataResult);
 
   return dataResult;
 }
