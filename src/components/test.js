@@ -10,12 +10,13 @@ export default async function FetchDataURL(url, page) {
   let dataResult = [];
 
   for (let i = 1; i <= page; i++) {
+    console.log(url + [i]);
     let results = await fetchJson(url + [i]).then(extractResult);
     for (let result of results) {
+      console.log(result);
       dataResult.push(result);
     }
   }
-  console.log(dataResult);
 
   return dataResult;
 }

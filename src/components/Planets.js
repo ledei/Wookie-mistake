@@ -6,13 +6,13 @@ export function Planets() {
   const [planets, setPlanets] = useState([]);
   const [count, setCount] = useState(1);
 
-  let apiPlanetURL = `https://swapi.dev/api/planets/?page=${count}`;
+  let apiURL = `https://swapi.dev/api/planets/?page=`;
 
   useEffect(() => {
-    FetchPlanets(apiPlanetURL).then((data) => {
+    FetchPlanets(apiURL, 6).then((data) => {
       setPlanets(data);
     });
-  }, [apiPlanetURL]);
+  }, [apiURL]);
 
   return (
     <>
