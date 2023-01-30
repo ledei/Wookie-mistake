@@ -1,7 +1,8 @@
 import { useState } from "react";
 import FetchPlanets from "./FetchDataURL";
 import Pagination from "./Pagination";
-import { RenderData } from "./RenderPlanetData";
+import { PopUp } from "./PopUp";
+import { RenderData } from "./RenderData";
 import { Search } from "./Searchbar";
 
 export function Planets() {
@@ -9,6 +10,8 @@ export function Planets() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(10);
   const [search, setSearch] = useState("");
+  const [content, setContent] = useState("");
+  const [togglePopUp, setTogglePopUp] = useState("hidden");
 
   let apiURL = `https://swapi.dev/api/planets/?page=`;
 
@@ -22,6 +25,13 @@ export function Planets() {
 
   return (
     <>
+      <PopUp
+        content={content}
+        page="planets"
+        togglePopUp={togglePopUp}
+        setTogglePopUp={setTogglePopUp}
+      />
+
       <label>search</label>
       <input
         type="text"
@@ -30,10 +40,24 @@ export function Planets() {
         }}
         placeholder="Search planets"
       />
+
+      <h1>Planets</h1>
+
       {search === "" ? (
-        planets && <RenderData results={currentPosts} title="Planets" />
+        planets && (
+          <RenderData
+            results={currentPosts}
+            setContent={setContent}
+            setTogglePopUp={setTogglePopUp}
+          />
+        )
       ) : (
-        <Search data={planets} title="Planets" search={search} />
+        <Search
+          data={planets}
+          search={search}
+          setTogglePopUp={setTogglePopUp}
+          setContent={setContent}
+        />
       )}
       {search === "" ? (
         <Pagination

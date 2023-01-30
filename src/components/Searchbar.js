@@ -1,15 +1,29 @@
 export function Search(props) {
   const data = props.data;
-  const title = props.title;
   const search = props.search;
+  const setContent = props.setContent;
+  const setTogglePopUp = props.setTogglePopUp;
+  const setHomeWorld = props.setHomeWorld;
+  const fetchHomeChecker = props.fetchHomeChecker;
 
-  function details(i) {
-    console.log("hej");
+  async function fetchHomeWorld(url) {
+    fetch(url).then((resp) =>
+      resp.json().then((result) => {
+        setHomeWorld(result);
+      })
+    );
+  }
+
+  function togglePopUp(content) {
+    setContent(content);
+    setTogglePopUp("pop-up");
+    if (fetchHomeChecker === "fetch") {
+      fetchHomeWorld(content.homeworld);
+    }
   }
 
   return (
     <>
-      <h1>{title}</h1>
       {data
         .filter((content) => {
           return search.toLowerCase() === ""
@@ -18,7 +32,7 @@ export function Search(props) {
         })
         .map((content, i) => {
           return (
-            <h4 onClick={() => details(i)} key={i}>
+            <h4 onClick={() => togglePopUp(content)} key={i}>
               {content.name}
             </h4>
           );
