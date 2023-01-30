@@ -81,7 +81,16 @@ export class PopUp extends React.Component {
             <p>Average height: {this.props.content.average_height} cm</p>
             <p>Average lifespan: {this.props.content.average_lifespan}</p>
             <p>language: {this.props.content.language}</p>
-            <p>Home world: {this.props.homeWorld.name}</p>
+            <div>
+              <h2>Home world:{this.props.homeWorld.name}</h2>
+              <p>Rotation period: {this.props.homeWorld.rotation_period}h</p>
+              <p>Orbital period: {this.props.homeWorld.orbital_period}days</p>
+              <p>Climate: {this.props.homeWorld.climate}</p>
+              <p>Gravity: {this.props.homeWorld.gravity}</p>
+              <p>Population: {this.props.homeWorld.population}</p>
+              <p>Diameter:{this.props.homeWorld.diameter}</p>
+              <p>Terrain: {this.props.homeWorld.terrain}</p>
+            </div>
             <button onClick={() => this.close()}>close</button>
           </div>
         </div>
