@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FetchFilms from "./FetchDataURL";
 import { RenderData } from "./RenderFilmsData";
 
@@ -7,11 +7,9 @@ export function Films() {
 
   let apiURL = `https://swapi.dev/api/films/?page=`;
 
-  useEffect(() => {
-    FetchFilms(apiURL, 1).then((data) => {
-      setFilms(data);
-    });
-  }, [apiURL]);
+  FetchFilms(apiURL, 1).then((data) => {
+    setFilms(data);
+  });
 
   return <>{films && <RenderData results={films} title="Films" />}</>;
 }
