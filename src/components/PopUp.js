@@ -41,11 +41,95 @@ export class PopUp extends React.Component {
     );
   }
 
+  planets() {
+    return (
+      <>
+        <div className={this.props.togglePopUp}>
+          <div className="pop-up-content">
+            <h2>{this.props.content.name}</h2>
+            <p>Population: {this.props.content.population}</p>
+            <p>Diameter:{this.props.content.diameter}</p>
+            <p>Terrain: {this.props.content.terrain}</p>
+            <button onClick={() => this.close()}>close</button>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  species() {
+    return (
+      <>
+        <div className={this.props.togglePopUp}>
+          <div className="pop-up-content">
+            <h2>{this.props.content.name}</h2>
+            <p>classification: {this.props.content.classification}</p>
+            <p>Average height: {this.props.content.average_height} cm</p>
+            <p>Average lifespan: {this.props.content.average_lifespan}</p>
+            <p>language: {this.props.content.language}</p>
+            <p>Home world: {this.props.homeWorld.name}</p>
+            <button onClick={() => this.close()}>close</button>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  starships() {
+    return (
+      <>
+        <div className={this.props.togglePopUp}>
+          <div className="pop-up-content">
+            <h2>{this.props.content.name}</h2>
+            <p>Model: {this.props.content.model}</p>
+            <p>Manufacturer: {this.props.content.manufacturer}</p>
+            <p>
+              Max atmosphering speed:
+              {this.props.content.max_atmosphering_speed} km/h
+            </p>
+            <p>Crew: {this.props.content.crew}</p>
+            <p>Passengers:{this.props.content.passengers}</p>
+            <p>starship class: {this.props.content.starship_class}</p>
+            <p>Cost in credits: {this.props.content.cost_in_credits}</p>
+            <button onClick={() => this.close()}>close</button>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  vehicles() {
+    return (
+      <>
+        <div className={this.props.togglePopUp}>
+          <div className="pop-up-content">
+            <h2>{this.props.content.name}</h2>
+            <p>Model: {this.props.content.model}</p>
+            <p>Manufacturer: {this.props.content.manufacturer}</p>
+            <p>
+              Max atmosphering speed:
+              {this.props.content.max_atmosphering_speed} km/h
+            </p>
+            <p>Crew: {this.props.content.crew}</p>
+            <p>Passengers:{this.props.content.passengers}</p>
+            <p>starship class: {this.props.content.starship_class}</p>
+            <p>Cost in credits: {this.props.content.cost_in_credits}</p>
+            <button onClick={() => this.close()}>close</button>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   render() {
     return (
       <>
         {this.props.page === "people" ? <>{this.people()}</> : null}
         {this.props.page === "films" ? <>{this.films()}</> : null}
+        {this.props.page === "planets" ? <>{this.planets()}</> : null}
+        {this.props.page === "species" ? <>{this.species()}</> : null}
+        {this.props.page === "starships" ? <>{this.starships()}</> : null}
+        {this.props.page === "vehicles" ? <>{this.vehicles()}</> : null}
       </>
     );
   }

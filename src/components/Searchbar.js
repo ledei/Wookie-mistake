@@ -4,6 +4,7 @@ export function Search(props) {
   const setContent = props.setContent;
   const setTogglePopUp = props.setTogglePopUp;
   const setHomeWorld = props.setHomeWorld;
+  const fetchHomeChecker = props.fetchHomeChecker;
 
   async function fetchHomeWorld(url) {
     fetch(url).then((resp) =>
@@ -16,7 +17,9 @@ export function Search(props) {
   function togglePopUp(content) {
     setContent(content);
     setTogglePopUp("pop-up");
-    fetchHomeWorld(content.homeworld);
+    if (fetchHomeChecker === "fetch") {
+      fetchHomeWorld(content.homeworld);
+    }
   }
 
   return (

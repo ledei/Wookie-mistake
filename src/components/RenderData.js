@@ -4,7 +4,9 @@ export class RenderData extends React.Component {
   togglePopUp(content) {
     this.props.setContent(content);
     this.props.setTogglePopUp("pop-up");
-    this.fetchHomeWorld(content.homeworld);
+    if (this.props.fetchHomeChecker === "fetch") {
+      this.fetchHomeWorld(content.homeworld);
+    }
   }
 
   async fetchHomeWorld(url) {
@@ -21,7 +23,7 @@ export class RenderData extends React.Component {
         {this.props.results.map((result, i) => {
           return (
             <h4 onClick={() => this.togglePopUp(result)} key={i}>
-              {result.name}
+              {this.props.titleChecker === "title" ? result.title : result.name}
             </h4>
           );
         })}

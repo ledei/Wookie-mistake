@@ -52,6 +52,7 @@ export function People() {
             setContent={setContent}
             setTogglePopUp={setTogglePopUp}
             setHomeWorld={setHomeWorld}
+            fetchHomeChecker="fetch"
           />
         )
       ) : (
@@ -61,6 +62,7 @@ export function People() {
           search={search}
           setContent={setContent}
           setHomeWorld={setHomeWorld}
+          fetchHomeChecker="fetch"
         />
       )}
 

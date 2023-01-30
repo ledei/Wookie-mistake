@@ -25,6 +25,7 @@ export function Films() {
       <h1>Films</h1>
       {films && (
         <RenderData
+          titleChecker="title"
           results={films}
           setContent={setContent}
           setTogglePopUp={setTogglePopUp}
