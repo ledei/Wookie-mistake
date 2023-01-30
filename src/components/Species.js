@@ -40,7 +40,7 @@ export function Species() {
         onChange={(e) => {
           setSearch(e.target.value);
         }}
-        placeholder="Search contacts"
+        placeholder="Search species"
       />
 
       <h1>Species</h1>
