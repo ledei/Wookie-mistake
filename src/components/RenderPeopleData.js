@@ -33,8 +33,8 @@ export class RenderData extends React.Component {
   }
 
   showDetails(i) {
-    this.fetchHomeWorld(this.props.results[i].homeworld);
     this.show();
+    this.fetchHomeWorld(this.props.results[i].homeworld);
 
     this.setState({
       name: this.props.results[i].name,
@@ -57,6 +57,7 @@ export class RenderData extends React.Component {
             </h4>
           );
         })}
+
         <div className={this.state.popUp}>
           <div className="pop-up-content">
             <h2>{this.state.name}</h2>
