@@ -16,7 +16,17 @@ export class PopUp extends React.Component {
             <p>Height: {this.props.content.height}cm</p>
             <p>Hair color: {this.props.content.hair_color}</p>
             <p>Eye color: {this.props.content.eye_color}</p>
-            <p>Home world: {this.props.homeWorld.name}</p>
+
+            <div>
+              <h2>Home world:{this.props.homeWorld.name}</h2>
+              <p>Rotation period: {this.props.homeWorld.rotation_period}h</p>
+              <p>Orbital period: {this.props.homeWorld.orbital_period}days</p>
+              <p>Climate: {this.props.homeWorld.climate}</p>
+              <p>Gravity: {this.props.homeWorld.gravity}</p>
+              <p>Population: {this.props.homeWorld.population}</p>
+              <p>Diameter:{this.props.homeWorld.diameter}</p>
+              <p>Terrain: {this.props.homeWorld.terrain}</p>
+            </div>
             <button onClick={() => this.close()}>close</button>
           </div>
         </div>
@@ -47,6 +57,10 @@ export class PopUp extends React.Component {
         <div className={this.props.togglePopUp}>
           <div className="pop-up-content">
             <h2>{this.props.content.name}</h2>
+            <p>Rotation period: {this.props.content.rotation_period}h</p>
+            <p>Orbital period: {this.props.content.orbital_period}days</p>
+            <p>Climate: {this.props.content.climate}</p>
+            <p>Gravity: {this.props.content.gravity}</p>
             <p>Population: {this.props.content.population}</p>
             <p>Diameter:{this.props.content.diameter}</p>
             <p>Terrain: {this.props.content.terrain}</p>
