@@ -28,7 +28,7 @@ export function Species() {
         onChange={(e) => {
           setSearch(e.target.value);
         }}
-        placeholder="Search species"
+        placeholder="Search contacts"
       />
 
       {search === "" ? (

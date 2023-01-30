@@ -1,9 +1,12 @@
 import { useState } from "react";
 import FetchFilms from "./FetchDataURL";
-import { RenderData } from "./RenderFilmsData";
+import { PopUp } from "./PopUp";
+import { RenderData } from "./RenderData";
 
 export function Films() {
   const [films, setFilms] = useState([]);
+  const [togglePopUp, setTogglePopUp] = useState("hidden");
+  const [content, setContent] = useState("");
 
   let apiURL = `https://swapi.dev/api/films/?page=`;
 
@@ -11,5 +14,22 @@ export function Films() {
     setFilms(data);
   });
 
-  return <>{films && <RenderData results={films} title="Films" />}</>;
+  return (
+    <>
+      <PopUp
+        content={content}
+        page="films"
+        togglePopUp={togglePopUp}
+        setTogglePopUp={setTogglePopUp}
+      />
+      <h1>Films</h1>
+      {films && (
+        <RenderData
+          results={films}
+          setContent={setContent}
+          setTogglePopUp={setTogglePopUp}
+        />
+      )}
+    </>
+  );
 }
