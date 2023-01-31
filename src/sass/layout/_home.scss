@@ -2,27 +2,90 @@
 
 .container-main{
     font-family: 'Fira Sans', sans-serif;
+   background-image: url(../img/pxfuel.com.jpg);
+   background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: -1;
+
+   
     .main-header{
+        font-size: 1.5rem;
         text-align: center;
+       color: rgba(255, 255, 255, 0.397);
+        
+        
+       
     }
 
     .main-about-us{
-        display: flex;
-        border: 1px solid black;
+        
+        
        
 
         .about-us-img{
-            border: 1px solid black;
+            position: relative;
+           
             width: 50%;
 
             .img{
-                width: 60%;
+                z-index: -1;
+                top: -14em;
+                left: -7em;
+              position: absolute;
+                width: 200%;
+               
             }
         }
 
         .about-us-section{
-            border: 1px solid black;
-            width: 50%;
+            
+            box-shadow:0px 0px 100px 2px #000000 inset;
+            z-index: 2;
+            border-radius: 1em;
+           background-color: grey;
+            padding: 2em;
+            text-align: center;
+            color: black;
+
+        }
+    }
+}
+
+@media screen and (min-width: 400px){
+    .container-main{
+       
+    
+       
+        .main-header{
+         
+           font-size: 3em;
+            
+           
+        }
+    
+        .main-about-us{
+            
+            
+           
+    
+            .about-us-img{
+                
+    
+                .img{
+                    top: -25em;
+                  width: 160%;
+                  left: -5em;
+                   
+                }
+            }
+    
+            .about-us-section{
+                font-size: 1.5em;
+                padding: 2.5em;
+    
+            }
         }
     }
 }
