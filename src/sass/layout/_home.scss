@@ -1,0 +1,28 @@
+@import "../font/font";
+
+.container-main{
+    font-family: 'Fira Sans', sans-serif;
+    .main-header{
+        text-align: center;
+    }
+
+    .main-about-us{
+        display: flex;
+        border: 1px solid black;
+       
+
+        .about-us-img{
+            border: 1px solid black;
+            width: 50%;
+
+            .img{
+                width: 60%;
+            }
+        }
+
+        .about-us-section{
+            border: 1px solid black;
+            width: 50%;
+        }
+    }
+}
