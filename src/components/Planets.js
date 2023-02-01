@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FetchPlanets from "./FetchDataURL";
 import Pagination from "./Pagination";
-
 import { RenderData } from "./RenderData";
 import { Search } from "./Searchbar";
 
@@ -23,15 +22,17 @@ export function Planets() {
 
   return (
     <>
-      <label>search</label>
-      <input
-        type="text"
-        onChange={(e) => {
-          setSearch(e.target.value);
-        }}
-        placeholder="Search planets"
-      />
-
+      <div className="container-search">
+        <label className="search-label">Search</label>
+        <input
+          className="search-input"
+          type="text"
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+          placeholder="Search planets"
+        />
+      </div>
       <h1>Planets/Moons</h1>
 
       {search === "" ? (
