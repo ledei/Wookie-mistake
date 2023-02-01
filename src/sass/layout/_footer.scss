@@ -1,0 +1,23 @@
+@import "../font/font";
+
+.container-footer{
+    font-family: 'Fira Sans', sans-serif;
+    background: rgba(44, 44, 44, 0.712);
+    text-align: center;
+    font-size: 1.5em;
+    height: 30vh;
+.footer-content{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 6em;
+    }
+
+    p{
+        letter-spacing: 2px;
+        color: black;
+    text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+    }
+}
+   
+}
