@@ -55,6 +55,7 @@ export function Species() {
           totalPosts={species.length}
           postPerPage={postPerPage}
           setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       ) : null}
     </>

@@ -1,17 +1,22 @@
-import React from "react";
-
-const Pagination = ({ totalPosts, postPerPage, setCurrentPage }) => {
+const Pagination = ({
+  totalPosts,
+  postPerPage,
+  setCurrentPage,
+  currentPage,
+}) => {
   let pages = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
     pages.push(i);
   }
-
   return (
-    <div>
+    <div className="pagination">
       {pages.map((page, i) => {
         return (
-          <button key={i} onClick={() => setCurrentPage(page)}>
+          <button
+            key={i}
+            onClick={() => setCurrentPage(page)}
+            className={page === currentPage ? "active" : ""}>
             {page}
           </button>
         );

@@ -44,6 +44,7 @@ export function Planets() {
           totalPosts={planets.length}
           postPerPage={postPerPage}
           setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       ) : null}
     </>

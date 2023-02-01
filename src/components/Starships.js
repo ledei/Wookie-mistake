@@ -44,6 +44,7 @@ export function Starships() {
           totalPosts={starships.length}
           postPerPage={postPerPage}
           setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       ) : null}
     </>

@@ -43,6 +43,7 @@ export function Vehicles() {
           totalPosts={vehicles.length}
           postPerPage={postPerPage}
           setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       ) : null}
     </>
