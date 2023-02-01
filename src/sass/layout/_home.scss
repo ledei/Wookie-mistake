@@ -3,7 +3,7 @@
 .container-main{
     font-family: 'Fira Sans', sans-serif;
    background-image: url(../img/pxfuel.com.jpg);
-   background-size: cover;
+   background-size: contain;
   
     height: 100vh;
     
@@ -161,7 +161,6 @@
             .about-us-section{
                box-shadow: 0 0 20px whitesmoke;
                 margin-left: 15%;
-                height: 15em;
                 font-size: 1rem;
                 width: 80%;
             }
