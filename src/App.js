@@ -7,6 +7,7 @@ import { Starships } from "./components/Starships";
 import { Films } from "./components/Films";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Starships" element={<Starships />} />
         <Route path="/Films" element={<Films />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
