@@ -38,8 +38,8 @@
 
             .img{
                 z-index: -1;
-                top: -14em;
-                left: -7em;
+                top: -12em;
+                left: -5em;
               position: absolute;
                 width: 200%;
                
@@ -47,7 +47,7 @@
         }
 
         .about-us-section{
-           
+           height: 16em;
             margin: 1em;
             box-shadow:0px 0px 100px 2px #000000 inset;
             z-index: 2;
@@ -70,14 +70,29 @@
     
         .main-about-us{
             
+
+            .about-us-img{
+                
+    
+                .img{
+                    
+                    top: -12em;
+                    left: -3.5em;
+                 
+                    width: 180%;
+                   
+                }
+            }
           
            
     
             
     
             .about-us-section{
-             
-                height: 16em;
+             display: flex;
+             justify-content: center;
+             flex-direction: column;
+                height: 20em;
             }
         }
     }
@@ -103,9 +118,9 @@
                 
     
                 .img{
-                    top: -20em;
-                  width: 160%;
-                  left: -5em;
+                    top: -18em;
+                  width: 140%;
+                  left: 0em;
                    
                 }
             }
