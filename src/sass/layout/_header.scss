@@ -1,6 +1,13 @@
  @import "../font/font";
 
 
+.nav-title{
+    text-align: center;
+    color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+            
+}
+
 .list-container{
     font-family: 'Fira Sans', sans-serif;
     display: flex;
@@ -67,6 +74,10 @@
 
 
 @media screen and (min-width: 1024px){
+
+    .nav-title{
+        font-size: 3rem;
+    }
 
     .list-container{
         justify-content: space-evenly;

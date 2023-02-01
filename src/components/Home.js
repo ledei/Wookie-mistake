@@ -8,10 +8,7 @@ export function Home() {
       <section className="main-header">
         <h1>Wookie mistake</h1>
         <p>
-          API from{" "}
-          <a href="https://swapi.dev/api/">
-            <strong>Swapi</strong>
-          </a>
+          API from <strong>Swapi</strong>
         </p>
       </section>
       <div className="main-about-us">
@@ -22,12 +19,11 @@ export function Home() {
           <h3>About us</h3>
           <p>
             This is a school project made by Niklas and Hampus. The API our
-            teacher provides to us is from{" "}
-            <a href="https://swapi.dev/api/">Swapi</a> and our assignment is to
-            pick a framework and make a SPA(single page application) with
-            categorised pages and respective detials for each page, We choose
-            react as our framework it has been a learning curve but a fun one.
-            We do home you enjoy our site
+            teacher provides to us is from Swapi and our assignment is to pick a
+            framework and make a SPA(single page application) with categorised
+            pages and respective detials for each page, We choose react as our
+            framework it has been a learning curve but a fun one. We do home you
+            enjoy our site
           </p>
         </section>
       </div>
