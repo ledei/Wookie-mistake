@@ -1,0 +1,106 @@
+.hidden{
+    display: none;
+}
+
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    height: 100vh;
+    margin: 1em;
+
+
+    .cards{
+        gap: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      
+        border: 1px solid white;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+ 
+    .card-title{
+        letter-spacing: 2px;
+        color: rgb(0, 0, 0);
+             text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+                 
+    }
+
+    .card-details{
+
+        color: white;
+
+        .details-content{
+            margin: 1em;
+        }
+
+        .details-home-world{
+            margin: 1em;
+            h2{
+                margin: .5em;
+                letter-spacing: 2px;
+        color: rgb(0, 0, 0);
+             text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+            }
+        }
+    }
+    .details-btn{
+        padding: .5em 1em;
+        
+        color: yellow;
+        background: rgba(255, 255, 255, 0.438);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+        border: none;
+
+    }
+    
+}
+}
+
+@media screen and (min-width: 1024px){
+
+    .container-cards{
+        flex-direction: row;
+      justify-content: center;
+
+
+        
+    
+        .cards{
+            font-size: 1.5rem;
+            flex-basis: 20%;
+
+          
+            
+     
+        
+        .details-btn{
+            padding: .5em 1em;
+            margin-bottom: 1em;
+            color: yellow;
+            background: rgba(255, 255, 255, 0.438);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+            border: none;
+
+            &:hover{
+                transition: 0.7s;
+                color: red;
+                transform: scale(1.1);
+            }
+    
+        }
+        
+    }
+    }
+
+}
