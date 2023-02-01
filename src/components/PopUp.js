@@ -18,7 +18,7 @@ export class PopUp extends React.Component {
             <p>Eye color: {this.props.content.eye_color}</p>
 
             <div>
-              <h2>Home world:{this.props.homeWorld.name}</h2>
+              <h2>{this.props.homeWorld.name}</h2>
               <p>Rotation period: {this.props.homeWorld.rotation_period}h</p>
               <p>Orbital period: {this.props.homeWorld.orbital_period}days</p>
               <p>Climate: {this.props.homeWorld.climate}</p>

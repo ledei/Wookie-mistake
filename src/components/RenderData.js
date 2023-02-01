@@ -22,9 +22,13 @@ export class RenderData extends React.Component {
       <>
         {this.props.results.map((result, i) => {
           return (
-            <h4 onClick={() => this.togglePopUp(result)} key={i}>
-              {this.props.titleChecker === "title" ? result.title : result.name}
-            </h4>
+            <div>
+              <h4 onClick={() => this.togglePopUp(result)} key={i}>
+                {this.props.titleChecker === "title"
+                  ? result.title
+                  : result.name}
+              </h4>
+            </div>
           );
         })}
       </>

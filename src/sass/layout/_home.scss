@@ -19,7 +19,10 @@
         text-align: center;
        color: rgba(255, 255, 255, 0.466);
         
-        
+        h1{
+            color: black;
+            text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+        }
        
     }
 
