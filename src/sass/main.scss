@@ -1,1 +1,10 @@
-@import "./components/popUp"
+@import "./components/popUp";
+
+@import "./layout/home";
+
+@import "./layout/footer";
+
+*{
+    margin: 0;
+    padding: 0;
+}

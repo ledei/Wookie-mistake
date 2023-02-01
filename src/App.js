@@ -6,12 +6,15 @@ import { Vehicles } from "./components/Vehicles";
 import { Starships } from "./components/Starships";
 import { Films } from "./components/Films";
 import { Header } from "./components/Header";
+import { Home } from "./components/Home";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/Planets" element={<Planets />} />
         <Route path="/People" element={<People />} />
         <Route path="/Species" element={<Species />} />
@@ -19,6 +22,7 @@ function App() {
         <Route path="/Starships" element={<Starships />} />
         <Route path="/Films" element={<Films />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
