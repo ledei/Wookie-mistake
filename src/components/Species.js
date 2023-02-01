@@ -23,14 +23,17 @@ export function Species() {
 
   return (
     <>
-      <label>search</label>
-      <input
-        type="text"
-        onChange={(e) => {
-          setSearch(e.target.value);
-        }}
-        placeholder="Search species"
-      />
+      <div className="container-search">
+        <label className="search-label">search</label>
+        <input
+          className="search-input"
+          type="text"
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+          placeholder="Search species"
+        />
+      </div>
 
       <h1>Species</h1>
 

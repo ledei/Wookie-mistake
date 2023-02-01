@@ -24,14 +24,17 @@ export function People() {
 
   return (
     <>
-      <label>search</label>
-      <input
-        type="text"
-        onChange={(e) => {
-          setSearch(e.target.value);
-        }}
-        placeholder="Search people"
-      />
+      <div className="container-search">
+        <label className="search-label">search</label>
+        <input
+          className="search-input"
+          type="text"
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+          placeholder="Search people"
+        />
+      </div>
 
       <h1>People</h1>
 
