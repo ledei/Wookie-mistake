@@ -3,31 +3,35 @@ import { Link } from "react-router-dom";
 export function Header() {
   return (
     <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+      { <nav> 
+  
+        <ul className="list-container">
+          <li className="list">
+            <Link to="/"className="beta-test">Home</Link>
           </li>
-          <li>
-            <Link to="/Planets">Planets</Link>
+          <li className="list">
+            <Link to="/Planets" className="beta-test" onClick={}>Planets</Link>
           </li>
-          <li>
-            <Link to="/People">People</Link>
+          <li className="list">
+            <Link to="/People" className="beta-test">People</Link>
           </li>
-          <li>
-            <Link to="/Species">Species</Link>
+          <li className="list">
+            <Link to="/Species" className="beta-test">Species</Link>
           </li>
-          <li>
-            <Link to="/Vehicles">Vehicles</Link>
+          <li className="list">
+            <Link to="/Vehicles" className="beta-test">Vehicles</Link>
           </li>
-          <li>
-            <Link to="/Starships">Starships</Link>
+          <li className="list">
+            <Link to="/Starships" className="beta-test">Starships</Link>
           </li>
-          <li>
-            <Link to="/Films">Films</Link>
+          <li className="list">
+            <Link to="/Films" className="beta-test"> Films</Link>
           </li>
-        </ul>
-      </nav>
+        </ul> 
+        
+      </nav> }  
+      
     </header>
+    
   );
 }

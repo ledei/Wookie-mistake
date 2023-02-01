@@ -1,0 +1,87 @@
+ @import "../font/font";
+
+body{font-family: 'Fira Sans', sans-serif;
+    background-image: url(../img/pxfuel.com.jpg);
+}
+a{
+    color: black;
+    text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+}
+
+.navbar{
+    font-family: 'Fira Sans', sans-serif;
+    // background-image: url(../img/pxfuel.com.jpg);
+
+    background-size: 100%;
+    font-size: 2em;
+padding-bottom: 2em;
+a{
+    color: white;
+}
+}
+.list{
+    text-align: center;
+   
+    
+    
+}
+
+
+
+@media screen and (min-width: 425px){
+    .list {margin: 1.1em;
+   font-size: 3em;; 
+    display: inline;
+   text-align: center;
+//    margin-left: 4em;
+   display: flex;
+   justify-content: center;
+    }.navbar{
+        font-size: 2em;
+       padding-left: -2em;
+       margin-left: -2em;
+       
+    }
+
+     a{
+            color: red;
+            color: black;
+            text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+            
+        }
+}
+
+
+@media screen and (min-width:768px ) {
+    a{
+        //  color: aqua;
+      
+    }.list{
+         display: flex;
+        // display: inline-flex;
+        align-items: center;
+        
+    }    
+    
+}
+
+
+@media screen and (min-width: 1024px){
+    a{
+
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+     
+        
+        color: black;
+        text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+    }a:hover{
+        //  box-shadow: 3px 3px 35px 23px rgba(225, 21, 21, 0.37);
+    transition: 0.7s;  
+     color: yellow;
+     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff1818, 0 0 30px #f13a0d, 0 0 40px #ee6504, 0 0 55px #ec0505, 0 0 75px #953d3b;}.list{
+
+    display: inline-flex;
+
+     }}
