@@ -6,6 +6,9 @@ export function Header() {
       <nav>
         <ul>
           <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
             <Link to="/Planets">Planets</Link>
           </li>
           <li>

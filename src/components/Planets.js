@@ -41,7 +41,7 @@ export function Planets() {
         placeholder="Search planets"
       />
 
-      <h1>Planets</h1>
+      <h1>Planets/Moons</h1>
 
       {search === "" ? (
         planets && (
