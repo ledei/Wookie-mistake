@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FetchVehicles from "./FetchDataURL";
 import Pagination from "./Pagination";
-import { PopUp } from "./PopUp";
 import { RenderData } from "./RenderData";
 import { Search } from "./Searchbar";
 
@@ -10,8 +9,6 @@ export function Vehicles() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(10);
   const [search, setSearch] = useState("");
-  const [content, setContent] = useState("");
-  const [togglePopUp, setTogglePopUp] = useState("hidden");
 
   let apiURL = `https://swapi.dev/api/vehicles/?page=`;
 
@@ -25,13 +22,6 @@ export function Vehicles() {
 
   return (
     <>
-      <PopUp
-        content={content}
-        page="vehicles"
-        togglePopUp={togglePopUp}
-        setTogglePopUp={setTogglePopUp}
-      />
-
       <label>search</label>
       <input
         type="text"
@@ -44,26 +34,16 @@ export function Vehicles() {
       <h1>Vehicles</h1>
 
       {search === "" ? (
-        vehicles && (
-          <RenderData
-            results={currentPosts}
-            setContent={setContent}
-            setTogglePopUp={setTogglePopUp}
-          />
-        )
+        vehicles && <RenderData results={currentPosts} page="vehicles" />
       ) : (
-        <Search
-          data={vehicles}
-          search={search}
-          setContent={setContent}
-          setTogglePopUp={setTogglePopUp}
-        />
+        <Search data={vehicles} search={search} page="vehicles" />
       )}
       {search === "" ? (
         <Pagination
           totalPosts={vehicles.length}
           postPerPage={postPerPage}
           setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       ) : null}
     </>
