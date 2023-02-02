@@ -5,7 +5,6 @@ export function Header() {
   const [active, setActive] = useState("home");
 
   function handleClick(activate) {
-    console.log(activate);
     setActive(activate);
   }
   return (

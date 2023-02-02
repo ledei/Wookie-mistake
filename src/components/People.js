@@ -10,8 +10,6 @@ export function People() {
   const [postPerPage] = useState(10);
   const [search, setSearch] = useState("");
 
-  console.log(currentPage);
-
   const apiURL = `https://swapi.dev/api/people/?page=`;
 
   FetchPeople(apiURL, 9).then((data) => {
