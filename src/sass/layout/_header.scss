@@ -1,0 +1,124 @@
+ @import "../font/font";
+
+
+.nav-title{
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+    }
+            
+}
+
+.list-container{
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    
+    
+    
+
+    .list{
+        list-style: none;
+       
+        letter-spacing: 2px;
+        font-size: 1.5em;
+        
+       
+        a{
+            color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+            text-decoration: none;
+        }
+
+        a.active{
+            color: yellow;
+                 text-shadow: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 425px){
+    .list-container{
+        font-family: 'Fira Sans', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        
+        
+        
+    
+    }
+
+
+@media screen and (min-width:768px ) {
+    .list-container{
+        font-family: 'Fira Sans', sans-serif;
+    
+        .list{
+            color: black;
+            text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: 1024px){
+
+    .nav-title{
+        font-size: 3rem;
+    }
+
+    .list-container{
+        justify-content: space-evenly;
+         
+         
+     
+         .list{
+             list-style: none;
+            
+             letter-spacing: 2px;
+             font-size: 3em;
+             
+            
+             a{
+                 color: rgb(0, 0, 0);
+             text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+                 text-decoration: none;
+
+                 &:hover{
+                    
+                transition: 0.7s;  
+                 color: yellow;
+                 text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff1818, 0 0 30px #f13a0d, 0 0 40px #ee6504, 0 0 55px #ec0505, 0 0 75px #953d3b;}
+             }
+     
+             a.active{
+                &:hover{
+                    
+                    transition: 0.7s;  
+                     color: yellow;
+                     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff1818, 0 0 30px #f13a0d, 0 0 40px #ee6504, 0 0 55px #ec0505, 0 0 75px #953d3b;}
+               
+             }
+         }
+     }
+
+    
+    }
+}

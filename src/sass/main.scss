@@ -1,0 +1,20 @@
+@import "./components/searchbar";
+
+@import "./components/pagination";
+
+@import "./layout/home";
+
+@import "./layout/footer";
+
+@import "./layout/header";
+
+@import "./layout/pages";
+
+body{
+    background-image: url(./img/pxfuel.com.jpg);
+    background-size: contain;
+}
+*{
+    margin: 0;
+    padding: 0;
+}

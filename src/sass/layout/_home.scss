@@ -1,0 +1,184 @@
+@import "../font/font";
+
+.container-main{
+    font-family: 'Fira Sans', sans-serif;
+   background-image: url(../img/pxfuel.com.jpg);
+   background-size: contain;
+  
+    height: 100vh;
+    
+    position: relative;
+    z-index: -1;
+
+
+   
+    .main-header{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.5rem;
+        text-align: center;
+       color: rgba(255, 255, 255, 0.466);
+        
+        h1{
+            color: black;
+            text-shadow: 2px 2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow, -2px -2px 0 yellow, 2px 0px 0 yellow, 0px 2px 0 yellow, -2px 0px 0 yellow, 0px -2px 0 yellow;
+        }
+       
+    }
+
+    .main-about-us{
+        
+        
+       
+
+        .about-us-img{
+            position: relative;
+           
+            width: 50%;
+
+            .img{
+                z-index: -1;
+                top: -12em;
+                left: -5em;
+              position: absolute;
+                width: 200%;
+               
+            }
+        }
+
+        .about-us-section{
+           height: 16em;
+            margin: 1em;
+            box-shadow:0px 0px 100px 2px #000000 inset;
+            z-index: 2;
+            border-radius: 1em;
+           background-color: grey;
+            padding: 2em;
+            text-align: center;
+            color: black;
+
+        }
+    }
+}
+
+@media screen and (min-width: 425px){
+    .container-main{
+       
+    
+       
+        
+    
+        .main-about-us{
+            
+
+            .about-us-img{
+                
+    
+                .img{
+                    
+                    top: -12em;
+                    left: -3.5em;
+                 
+                    width: 180%;
+                   
+                }
+            }
+          
+           
+    
+            
+    
+            .about-us-section{
+             display: flex;
+             justify-content: center;
+             flex-direction: column;
+                height: 20em;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .container-main{
+       
+    
+       
+        .main-header{
+         
+           font-size: 2rem;
+            
+           
+        }
+    
+        .main-about-us{
+            
+            
+           
+    
+            .about-us-img{
+                
+    
+                .img{
+                    top: -18em;
+                  width: 140%;
+                  left: 0em;
+                   
+                }
+            }
+    
+            .about-us-section{
+                font-size: 1.5em;
+                padding: 2.5em;
+    
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container-main{
+       
+   
+       overflow: hidden;
+
+       .main-header{
+       
+         
+        color: rgb(255, 255, 255);
+         
+        
+     }
+        
+    
+        .main-about-us{
+            
+            
+            margin: 0 auto;
+              display: flex;
+              flex-direction: row-reverse;
+              width: 90%;
+                
+           
+    
+            .about-us-img{
+                
+                height: 100%;
+                width: 100%;
+               
+    
+                .img{
+                    
+                    position: relative;
+                  
+                  
+                }
+            }
+    
+            .about-us-section{
+               box-shadow: 0 0 20px whitesmoke;
+                margin-left: 15%;
+                font-size: 1rem;
+                width: 80%;
+            }
+        }
+    }
+}

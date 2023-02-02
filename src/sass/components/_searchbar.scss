@@ -1,0 +1,31 @@
+@import "../font/font";
+
+.container-search{
+    
+    margin: 1em;
+   text-align: center;
+   position: relative;
+   
+    .search-input{
+
+        top: 30%;
+        border-radius: 10px;
+        left: 5%;
+        width: 20rem;
+        height: 1.5em;
+        background: white;
+
+        &:focus{
+            box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red,
+          0 0 100px red;
+        }
+        
+        
+   
+}
+
+.search-label{
+color: whitesmoke;
+}
+}
+
