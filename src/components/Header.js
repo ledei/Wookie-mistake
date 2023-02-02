@@ -10,7 +10,13 @@ export function Header() {
   }
   return (
     <header>
-      <h1 className="nav-title">Wookie mistake</h1>
+      <h1
+        className="nav-title"
+        onClick={() => {
+          handleClick("home");
+        }}>
+        <Link to="/">Wookie Mistake</Link>
+      </h1>
       {
         <nav>
           <ul className="list-container">
