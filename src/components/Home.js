@@ -6,7 +6,7 @@ export function Home() {
   return (
     <main className="container-main">
       <section className="main-header">
-        <h1>Wookie mistake</h1>
+        <h1>Wookie Mistake</h1>
         <p>
           API from <strong>Swapi</strong>
         </p>
