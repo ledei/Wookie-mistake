@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Wookie-mistake/static/css/main.330eea60.css",
-    "main.js": "/Wookie-mistake/static/js/main.b304fabf.js",
+    "main.js": "/Wookie-mistake/static/js/main.357c94cd.js",
     "static/media/darth-vader.png": "/Wookie-mistake/static/media/darth-vader.4b60e621be29226da721.png",
     "static/media/pxfuel.com.jpg": "/Wookie-mistake/static/media/pxfuel.com.0ed85251220be8fd2695.jpg",
     "static/media/darth-vader-18586.png": "/Wookie-mistake/static/media/darth-vader-18586.f83e26c03173ddab9234.png",
     "index.html": "/Wookie-mistake/index.html",
     "main.330eea60.css.map": "/Wookie-mistake/static/css/main.330eea60.css.map",
-    "main.b304fabf.js.map": "/Wookie-mistake/static/js/main.b304fabf.js.map"
+    "main.357c94cd.js.map": "/Wookie-mistake/static/js/main.357c94cd.js.map"
   },
   "entrypoints": [
     "static/css/main.330eea60.css",
-    "static/js/main.b304fabf.js"
+    "static/js/main.357c94cd.js"
   ]
 }
