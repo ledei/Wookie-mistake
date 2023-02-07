@@ -14,7 +14,7 @@ export function Header() {
         onClick={() => {
           handleClick("home");
         }}>
-        <Link to="/">Wookie Mistake</Link>
+        <Link to="/Wookie-mistake">Wookie Mistake</Link>
       </h1>
       {
         <nav>
@@ -24,7 +24,9 @@ export function Header() {
               onClick={() => {
                 handleClick("home");
               }}>
-              <Link to="/" className={active === "home" ? "active" : ""}>
+              <Link
+                to="/Wookie-mistake"
+                className={active === "home" ? "active" : ""}>
                 Home
               </Link>
             </li>
